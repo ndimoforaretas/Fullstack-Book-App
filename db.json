@@ -1,3 +1,16 @@
 {
-  "books": []
+  "books": [
+    {
+      "title": "A good book",
+      "id": 1
+    },
+    {
+      "title": "See you there!",
+      "id": 2
+    },
+    {
+      "title": "Let us jump!",
+      "id": 3
+    }
+  ]
 }
