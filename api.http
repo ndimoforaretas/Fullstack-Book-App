@@ -1,11 +1,31 @@
+#Gets all books
 GET http://localhost:3001/books HTTP/1.1
 Content-Type: application/json
 
 ###
 
+# Create book
 POST http://localhost:3001/books HTTP/1.1
 Content-Type: application/json
 
 {
     "title": "Steal like an Artist"
 }
+
+###
+
+# Update a book
+PUT http://localhost:3001/books/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "title": "aTOMIC hABITS"
+}
+
+
+###
+
+# Delete a book
+DELETE http://localhost:3001/books/1 HTTP/1.1
+Content-Type: application/json
+
