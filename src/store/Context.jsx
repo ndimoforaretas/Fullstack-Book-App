@@ -1,16 +1,16 @@
 import axios from "axios";
-import { createContext, useState, useContext } from "react";
+import { createContext, useState, useContext, useCallback } from "react";
 
 const BookContext = createContext();
 
 export function ParentContext({ children }) {
   const [books, setBooks] = useState([]);
 
-  const getBooks = async () => {
+  const getBooks = useCallback(async () => {
     const response = await axios.get("http://localhost:3001/books");
 
     setBooks(response.data);
-  };
+  }, []);
 
   const editBookById = async (id, newTitle) => {
     const response = await axios.put(`http://localhost:3001/books/${id}`, {
@@ -27,7 +27,7 @@ export function ParentContext({ children }) {
   };
 
   const deleteBookById = async (id) => {
-    await axios.put(`http://localhost:3001/books/${id}`);
+    await axios.delete(`http://localhost:3001/books/${id}`);
 
     const updatedBooks = books.filter((book) => {
       return book.id !== id;

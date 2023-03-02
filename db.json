@@ -1,11 +1,3 @@
 {
-  "books": [
-    {
-      "title": "Let us NOT jump!",
-      "id": 3
-    },
-    {
-      "id": 4
-    }
-  ]
+  "books": []
 }
