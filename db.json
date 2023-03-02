@@ -1,27 +1,11 @@
 {
   "books": [
     {
-      "id": 1
-    },
-    {
-      "title": "See you there!",
-      "id": 2
-    },
-    {
       "title": "Let us NOT jump!",
       "id": 3
     },
     {
-      "title": "Web Dev für Dummies",
       "id": 4
-    },
-    {
-      "title": "ASDFSAD",
-      "id": 5
-    },
-    {
-      "title": "ASDFASD",
-      "id": 6
     }
   ]
 }

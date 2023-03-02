@@ -1,11 +1,12 @@
+import store from "../store/Context";
 import BookShow from "./BookShow";
 
-function BookList({ books, onDelete, onEdit }) {
+function BookList() {
   //--host 127.0.0.1
+
+  const { books } = store();
   const renderedBooks = books.map((book) => {
-    return (
-      <BookShow onDelete={onDelete} onEdit={onEdit} key={book.id} book={book} />
-    );
+    return <BookShow key={book.id} book={book} />;
   });
   return <div className="book-list">{renderedBooks}</div>;
 }
